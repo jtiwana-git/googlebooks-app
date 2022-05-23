@@ -1,4 +1,6 @@
 npm run develop - TO START BACKEND SERVER AND THEN FRONT END AT THE SAME TIME
+
+
 Add Apollo SERVER and graphQL
 schemas - typedefs, resolvers (SERVER SIDE)
 delete the folder ROUTE
