@@ -1,0 +1,11 @@
+npm run develop - TO START BACKEND SERVER AND THEN FRONT END AT THE SAME TIME
+Add Apollo SERVER and graphQL
+schemas - typedefs, resolvers (SERVER SIDE)
+delete the folder ROUTE
+npm start for graphQL /  console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+Queries and mutations (CLIENT SIDE)
+**Once done - Delete Route folder (COMPLETE) - needs to remove coding that is connected to this
+
+
+
+
