@@ -8,6 +8,6 @@ npm start for graphQL /  console.log(`Use GraphQL at http://localhost:${PORT}${s
 Queries and mutations (CLIENT SIDE)
 **Once done - Delete Route folder (COMPLETE) - needs to remove coding that is connected to this
 
-
+check image type - typeDefs
 
 
