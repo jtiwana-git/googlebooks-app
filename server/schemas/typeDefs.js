@@ -31,9 +31,9 @@ type Query {
 input SavedBookInput {
     bookId: String
     title: String
+    authors: [String]
     description: String
     image: String
-    authors: [String]
     link: String
 }
 
