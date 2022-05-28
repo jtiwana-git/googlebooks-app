@@ -1,13 +1,16 @@
 npm run develop - TO START BACKEND SERVER AND THEN FRONT END AT THE SAME TIME
 
-
-Add Apollo SERVER and graphQL
-schemas - typedefs, resolvers (SERVER SIDE)
 delete the folder ROUTE
-npm start for graphQL /  console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 Queries and mutations (CLIENT SIDE)
 **Once done - Delete Route folder (COMPLETE) - needs to remove coding that is connected to this
+..
+Recode API.js
 
-check image type - typeDefs
+SavedBooks.js:
 
+Remove the useEffect() Hook that sets the state for UserData.
+
+Instead, use the useQuery() Hook to execute the GET_ME query on load and save it to a variable named userData.
+
+Use the useMutation() Hook to execute the REMOVE_BOOK mutation in the handleDeleteBook() function instead of the deleteBook() function that's imported from API file. (Make sure you keep the removeBookId() function in place!)
 

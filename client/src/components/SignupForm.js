@@ -75,7 +75,7 @@ const [addUser, { error, data }] = useMutation(ADD_USER);
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+        <Alert dismissible onClose={() => error.message} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
 
@@ -124,11 +124,7 @@ const [addUser, { error, data }] = useMutation(ADD_USER);
           Submit
         </Button>
       </Form>
-      {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
+    
     </>
   );
   };

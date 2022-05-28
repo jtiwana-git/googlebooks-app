@@ -1,3 +1,7 @@
+import { GET_ME } from '../utils/queries';
+import {LOGIN_USER, ADD_USER, SAVE_BOOK, REMOVE_BOOK } from '../utils/mutations';
+
+
 // route to get logged in user's info (needs the token)
 export const getMe = (token) => {
   return fetch('/api/users/me', {

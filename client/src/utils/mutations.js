@@ -25,6 +25,7 @@ mutation addUser($username: String!, $email: String!, $password: String!) {
       }
     }
   }
+  
 `;
 
 
@@ -36,12 +37,12 @@ mutation saveBook($book: SavedBookInput!) {
       email
       bookCount
       savedBooks {
+        bookId
+        title
         authors
         description
-        bookId
         image
         link
-        title
       }
     }
   }`;
