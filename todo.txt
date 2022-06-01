@@ -4,8 +4,17 @@ delete the folder ROUTE
 Queries and mutations (CLIENT SIDE)
 **Once done - Delete Route folder (COMPLETE) - needs to remove coding that is connected to this
 ..
-Recode API.js
 
+
+==================================================================================================================
+
+SearchBooks.js:
+
+Use the Apollo useMutation() Hook to execute the SAVE_BOOK mutation in the handleSaveBook() function instead of the saveBook() function imported from the API file.
+
+Make sure you keep the logic for saving the book's ID to state in the try...catch block!
+
+====================================================================================================================
 SavedBooks.js:
 
 Remove the useEffect() Hook that sets the state for UserData.
@@ -14,3 +23,11 @@ Instead, use the useQuery() Hook to execute the GET_ME query on load and save it
 
 Use the useMutation() Hook to execute the REMOVE_BOOK mutation in the handleDeleteBook() function instead of the deleteBook() function that's imported from API file. (Make sure you keep the removeBookId() function in place!)
 
+====================================================================================================================
+SignupForm.js: Replace the addUser() functionality imported from the API file with the ADD_USER mutation functionality.
+
+====================================================================================================================
+LoginForm.js: Replace the loginUser() functionality imported from the API file with the LOGIN_USER mutation functionality.
+
+====================================================================================================================
+Recode API.js

@@ -56,45 +56,32 @@ const SearchBooks = () => {
   };
 
   // CHANGE "HANDLESAVEBOOK()"
-  // create function to handle saving a book to our database
-  const [searchBook, {error}] = useMutation(SAVE_BOOK);
+  // Use the Apollo useMutation() Hook to execute the SAVE_BOOK mutation in the handleSaveBook() function instead of the saveBook() function imported from the API file.   Make sure you keep the logic for saving the book's ID to state in the try...catch block!
+  const [saveBook] = useMutation(SAVE_BOOK)
+  
   const handleSaveBook = async (bookId) => {
     try {
-      const response = await searchBook({
+      const response = await saveBook({
         variables: {
           book: {
             bookId,
           },
         },
       });
-      console.log(response);   
-       
-    } catch (error) {
-      console.error(error);
+
+      if (!response.data) {
+        throw new Error('something went wrong!');
+      }
+
+      setSavedBookIds([...savedBookIds, bookId]);
+    } catch (err) {
+      console.error(err);
     }
+  }
+  handleSaveBook()
 
-    // const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
-
-    // // get token
-    // const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-    // if (!token) {
-    //   return false;
-    // }
-
-    // try {
-    //   const response = await saveBook(bookToSave, token);
-
-    //   if (!response.ok) {
-    //     throw new Error('something went wrong!');
-    //   }
-
-    //   // if book successfully saves to user's account, save book id to state
-    //   setSavedBookIds([...savedBookIds, bookToSave.bookId]);
-    // } catch (err) {
-    //   console.error(err);
-    // }
-  };
+   }
+   
 
   return (
     <>
