@@ -16,6 +16,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.9"
+    "@mapbox/node-pre-gyp": "^1.0.9",
+    "dotenv": "^16.0.1"
   }
 }

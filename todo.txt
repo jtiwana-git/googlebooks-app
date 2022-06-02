@@ -31,3 +31,10 @@ LoginForm.js: Replace the loginUser() functionality imported from the API file w
 
 ====================================================================================================================
 Recode API.js
+
+ type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    saveBook(bookData: SavedBookInput!): User
+    removeBook(bookId: ID!): User
+}
