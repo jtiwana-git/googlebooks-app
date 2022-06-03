@@ -14,31 +14,35 @@ const {loading, data} = useQuery(GET_ME);
 const [removeBook, {error}] = useMutation(REMOVE_BOOK);
 const userData = data?.me || {}
 
-    
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+
+
   const handleDeleteBook = async (bookId) => { ;
-  const token = Auth.loggedIn() ? Auth.getToken() : null;
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
     
     if (!token) {
       return false;
     }
     
     try {
-      const { data } = await removeBook({variables: {bookId}}); debugger;
-      
-      
+      const { data } = await removeBook({variables: { bookId }}); 
+            
       removeBookId(bookId);
-      console.log(bookId);
-   
+      console.log(data);
+      console.log(bookId)
+
     } catch (err) {
       console.error(err);
     }
+
   };
 
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
   }
+
+
+  
 
   return (
     <>
