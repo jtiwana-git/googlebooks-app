@@ -35,6 +35,11 @@ SO THAT I can keep a list of books to purchase
 ![Animation shows user clicking "Save This Book!" button to save books that appear in search results. The button label changes to "Book Already Saved" after it is clicked and the book is saved.](./Assets/21-mern-homework-demo-02.gif)
 
 
-add graphql (gif)
+
+## Deployed App
+
+- **GitHub**: https://github.com/jtiwana-git/googlebooks-app
+<br>
+- **Deployed App**: https://polar-spire-67624.herokuapp.com/
 
 
