@@ -27,9 +27,7 @@ const userData = data?.me || {}
       const { data } = await removeBook({variables: { bookId }}); 
             
       removeBookId(bookId);
-      console.log(data);
-      console.log(bookId)
-
+     
     } catch (err) {
       console.error(err);
     }
